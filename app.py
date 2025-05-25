@@ -63,6 +63,27 @@ if 'selected_location' not in st.session_state:
 # Header
 st.title("IndiaTrek Vista Explorer")
 
+# Add feature buttons
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    if st.button("Book Now 🎫", use_container_width=True):
+        st.switch_page("pages/1_Booking.py")
+with col2:
+    if st.button("Cultural Dashboard 🏛️", use_container_width=True):
+        st.switch_page("pages/2_Cultural_Dashboard.py")
+with col3:
+    if st.button("Smart Crowd 👥", use_container_width=True):
+        st.switch_page("pages/3_Smart_Crowd.py")
+with col4:
+    if st.button("Artisan Support 🎨", use_container_width=True):
+        st.switch_page("pages/4_Artisan_Support.py")
+
+# Add AI Storytelling button below
+col1, col2, col3 = st.columns([1,2,1])
+with col2:
+    if st.button("AI Storytelling & Multilingual Experience 📚", use_container_width=True):
+        st.switch_page("pages/5_AI_Storytelling.py")
+
 # Sidebar
 with st.sidebar:
     st.header("Search & Filter")
